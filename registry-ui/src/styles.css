@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(~bootstrap/dist/css/bootstrap.min.css);
+html {
+  height: 100%;
+}
+
+body {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-rendering: optimizeLegibility;
+  position: relative;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Open Sans Light', sans-serif;
+  font-weight: normal;
+  font-size: 1.3em;
+  background: linear-gradient(120deg, #ececf6 25%, #c6bdc1 60%, #d8dce0 80%);
+}
+
+h1 {
+  font-size: 1.3em;
+}
+
+.table-bordered, .table-bordered td, .table-bordered th {
+  border: 1px solid #0d1a40;
+}

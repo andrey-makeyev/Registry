@@ -1,24 +1,62 @@
-<div class="container">
+<div class="container mt-5">
+
+  <form [formGroup]="personForm" (ngSubmit)="submitRegistration()" novalidate>
+    <div *ngIf="validMessage != ''">
+      <h3 class="has-info">{{validMessage}}</h3>
+    </div>
+    <div class="form-group">
+      <label>Personal ID</label>
+      <input type="text" class="form-control" formControlName="personalId" required autofocus/>
+    </div>
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="email" class="form-control" formControlName="firstName" required/>
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text" class="form-control" formControlName="lastName" required/>
+    </div>
+    <div class="form-group">
+      <label>Gender</label>
+      <select class="form-control" formControlName="model" required>
+        <option value="">Select a gender</option>
+        <option *ngFor="let m of models"
+                [value]="m">
+          {{m}}
+        </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Date Of Birth</label>
+      <input type="text" class="form-control" formControlName="dateOfBirth" required/>
+    </div>
+    <button type="submit" class="btn btn-outline-success btn-lg" >Submit</button>
+  </form>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12"><h1>Search</h1></div>
+    <div class="col-12">
+      <nav class="navbar">
+        <input class="form-control" type="text" name="firstName" [(ngModel)]="firstName" (ngModelChange)="Search()"
+               placeholder="Enter First Name to search">
+      </nav>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <h1>List</h1>
     <table class="table table-bordered table-inverse">
       <tr>
         <th>Personal ID</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Gender</th>
+
         <th class="text-right">Date Of Birth</th>
       </tr>
       <tr *ngFor="let person of people">
         <td>
-          {{person.personalId}}
-        </td>
-        <td>
-          {{person.firstName}}
-        </td>
-        <td>
-          {{person.lastName}}
-        </td>
-        <td>
-          {{person.gender}}
+          <a [routerLink]="['/view', person.id]">{{person.personalId}}</a>
         </td>
         <td class="text-right">
           {{person.dateOfBirth}}

@@ -40,8 +40,12 @@ CREATE TABLE `person` (
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 INSERT INTO person (id, personal_id, first_name, last_name, gender, date_of_birth)
-VALUES (1, 'ID_1', 'Karlis', 'Krumins', 'male', {ts '2012-09-17 18:47:52.690'});
+VALUES (1, 'PERSONAL_ID_1', 'Viktors', 'Krumins', 'male', {ts '1970-09-17 18:47:52.690'});
 INSERT INTO person (id, personal_id, first_name, last_name, gender, date_of_birth)
-VALUES (2, 'ID_2', 'Andris', 'Liepins', 'male', {ts '2013-09-17 18:47:52.690'});
+VALUES (2, 'PERSONAL_ID_2', 'Andris', 'Liepins', 'male', {ts '1999-03-17 11:87:00.000'});
 INSERT INTO person (id, personal_id, first_name, last_name, gender, date_of_birth)
-VALUES (3, 'ID_3', 'Vizma', 'Balode', 'female', {ts '2014-09-17 18:47:52.690'});
+VALUES (3, 'PERSONAL_ID_3', 'Vizma', 'Ozola', 'female', {ts '2000-09-10 10:47:02.690'});
+INSERT INTO person (id, personal_id, first_name, last_name, gender, date_of_birth)
+VALUES (4, 'PERSONAL_ID_4', 'Janis', 'Balodis', 'male', {ts '1990-05-01 05:07:10.010'});
+INSERT INTO person (id, personal_id, first_name, last_name, gender, date_of_birth)
+VALUES (5, 'PERSONAL_ID_5', 'Emma', 'Lopez', 'female', {ts '2001-01-01 01:01:01.001'});

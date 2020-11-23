@@ -1,5 +1,5 @@
 # 1. Implement simple REST service based on spring-boot framework
-a. Service input  personal id; date of birth
+a. Service input personal id; date of birth
 
 
 b. Service output Person object with following properties:

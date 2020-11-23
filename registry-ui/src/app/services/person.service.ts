@@ -15,4 +15,13 @@ export class PersonService {
   getPeople() {
     return this.http.get('/server/api/v1/people');
   }
+
+  getPerson(id: number) {
+    return this.http.get('/server/api/v1/people/' + id);
+  }
+  createPersonRegistration(person){
+    let body = JSON.stringify(person);
+    return this.http.post('/server/api/v1/people', body, httpOptions)
+  }
+
 }

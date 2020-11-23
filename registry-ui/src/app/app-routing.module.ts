@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {RegistryComponent} from "./components/registry/registry.component";
+import { RegistryComponent } from "./components/registry/registry.component";
+import { ViewDelailsComponent } from "./components/view-delails/view-delails.component";
 
 const routes: Routes = [
   {
-    path: 'registry',
+    path: '',
     component: RegistryComponent
+  },
+  {
+    path: 'view/:id',
+    component: ViewDelailsComponent
   }
 ];
 
