@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from "rxjs";
 
 const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  headers: new HttpHeaders({ 'Content-Type':'application/json'})
 }
 
 @Injectable(
@@ -13,7 +13,7 @@ export class PersonService {
 
   constructor(private http:HttpClient) { }
   getPeople() {
-    return this.http.get('/server/api/v1/people');
+    return this.http.get('/server/api/v1/people/');
   }
 
   getPerson(id: number) {
@@ -21,7 +21,7 @@ export class PersonService {
   }
   createPersonRegistration(person){
     let body = JSON.stringify(person);
-    return this.http.post('/server/api/v1/people', body, httpOptions)
+    return this.http.post('/server/api/v1/people/', body, httpOptions)
   }
 
 }
